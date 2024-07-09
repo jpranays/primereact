@@ -120,12 +120,6 @@ export const Sidebar = React.forwardRef((inProps, ref) => {
         getCloseIcon: () => closeIconRef.current
     }));
 
-    useMountEffect(() => {
-        if (props.visible) {
-            setMaskVisibleState(true);
-        }
-    });
-
     useUpdateEffect(() => {
         if (props.visible && !maskVisibleState) {
             setMaskVisibleState(true);
